@@ -24,8 +24,7 @@
  
  3. Ciclos e iteraciones
  
- 4. Funciones
- 
+ 4. Funciones 
 ```
 
 

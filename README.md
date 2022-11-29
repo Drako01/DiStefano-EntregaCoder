@@ -28,6 +28,20 @@
 ```
 
 
+### 2da Entrega
+
+
+```ssh
+ 5. Objetos
+ 
+ 6. Arrays
+ 
+ 7. Funciones de orden superior
+ 
+ 8. DOM 
+```
+
+
 ---
 
 

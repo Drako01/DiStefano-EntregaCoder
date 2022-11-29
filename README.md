@@ -72,10 +72,11 @@
 ```
 
 
-## Entrega Final
+## Entrega Final:
 
 
-### Incluye todos los Temas vistos en un Proyecto Integrador.
+### Proyecto Integrador que Incluya todos los Temas vistos en el Curso.
+
 
 
 ---

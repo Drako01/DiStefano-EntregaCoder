@@ -42,6 +42,35 @@
 ```
 
 
+### 3er Entrega
+
+
+```ssh
+ 9. Eventos
+ 
+ 10. Storage & JSON
+ 
+ 11. Workshop
+ 
+ 12. Operadores avanzados 
+```
+
+## Entrega Final
+
+
+```ssh
+ 13. Librerías
+ 
+ 14. Asincronía y promesas
+ 
+ 15. Ajax & Fetch
+ 
+ 16. Frameworks & NodeJS
+```
+
+
+
+
 ---
 
 

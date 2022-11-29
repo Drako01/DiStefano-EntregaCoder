@@ -55,10 +55,10 @@
  12. Operadores avanzados 
 ```
 
-## Entrega Final
+### 4ta Entrega
 
 
-### Incluye todos los Temas vistos en un Proyecto Integrador.
+
 
 
 ```ssh
@@ -72,6 +72,10 @@
 ```
 
 
+## Entrega Final
+
+
+### Incluye todos los Temas vistos en un Proyecto Integrador.
 
 
 ---

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* Estructura General del Estilo */
+* {
+  font-family: "Roboto";
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Autor Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

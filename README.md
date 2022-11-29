@@ -58,6 +58,9 @@
 ## Entrega Final
 
 
+### Incluye todos los Temas vistos en un Proyecto Integrador.
+
+
 ```ssh
  13. Librerías
  
@@ -74,4 +77,4 @@
 ---
 
 
-## Alejandro Daniel Di Stefano
+## Autor: Alejandro Daniel Di Stefano

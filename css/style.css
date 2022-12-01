@@ -1,21 +1,171 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto";
   src: url("../font/Roboto-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-/* Estructura General del Estilo */
-* {
-  font-family: "Roboto";
+/* Variables */
+:root {
+  /* Colores */
+  --first: #124;
+  --second: #248;
+  --light: #eee;
+  --dark: #333;
+  --grey: #282828;
+  --yellow: #ffff00;
+  --med: #c7c6c6;
+  /* Tamaños */
+  --small: 200px;
+  --medium: 400px;
+  --large: 600px;
+  /* Tipografia */
+  --font: "Roboto";
 }
 
-h1 {
+/* Estructura General del Estilo */
+* {
+  font-family: var(--font);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Reinicios de Estilos */
+/* Margenes */
+body,
+h1,
+h2,
+h3,
+h4,
+header p,
+.submenu,
+.subitems,
+.menu {
+  margin: 0;
+}
+
+/* Rellenos */
+.submenu,
+.subitems,
+.menu {
+  padding: 0;
+}
+
+/* Bordes */
+iframe {
+  border: 0;
+}
+
+h1, h2, h3 {
   text-align: center;
+}
+
+header .menu {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey);
+  color: var(--light);
+  padding: 1rem 0;
+  align-items: center;
+  padding-left: 3rem;
+}
+header .menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+header .menu a:hover {
+  color: var(--yellow);
+}
+header .menu h1,
+header .menu p {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+:is(ul) li {
+  min-width: 6rem;
+  padding: 0.25rem 0.5rem;
+  list-style: none;
 }
 
 footer {
   display: flex;
   justify-content: center;
+  background-color: var(--grey);
+  color: var(--light);
+  padding: 1rem 0;
+  align-items: center;
+  position: relative;
 }
 
-/* Autor Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */
+.tabla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+.tabla .imputs-valores {
+  width: 600px;
+  background-color: var(--med);
+  border-radius: 1rem;
+  padding: 5rem;
+  box-shadow: -0.1rem 0.125rem 0.5rem var(--dark);
+}
+.tabla .imputs-valores .imputs {
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  background-color: var(--med);
+}
+.tabla .imputs-valores .imputs label {
+  background-color: var(--med);
+  margin-top: 0.5rem;
+}
+.tabla .imputs-valores .imputs input, .tabla .imputs-valores .imputs select, .tabla .imputs-valores .imputs .boton {
+  width: 220px;
+  border: none;
+  border-radius: 0.25rem;
+}
+.tabla .imputs-valores .imputs .boton {
+  background-color: var(--second);
+  color: var(--light);
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  box-shadow: -0.125rem 0.125rem 0.5rem var(--dark);
+  cursor: pointer;
+}
+.tabla .imputs-valores .imputs .boton:hover {
+  box-shadow: none;
+}
+
+.valor-cuota {
+  background-color: var(--med);
+  padding: 0.25rem 1rem;
+}
+
+.recuadro {
+  font-weight: 600;
+  background-color: var(--dark);
+  color: var(--light);
+  letter-spacing: 1px;
+  padding: 1rem;
+}
+
+#tasaInteres {
+  background-color: var(--med);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  color: var(--second);
+}
+
+#main h1 {
+  padding-top: 2rem;
+}
+
+/* Autor: Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

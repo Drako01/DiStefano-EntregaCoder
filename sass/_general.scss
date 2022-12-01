@@ -1,14 +1,57 @@
-/* Estructura General del Estilo */
-
-* {
-    font-family: "Roboto";
+/* Variables */
+:root{
+    /* Colores */
+    --first: #124;
+    --second: #248;
+    --light: #eee;
+    --dark: #333;
+    --grey: #282828;
+    --yellow: #ffff00;
+    --med: #c7c6c6;
+    /* Tamaños */
+    --small: 200px;
+    --medium: 400px;
+    --large: 600px; 
+    /* Tipografia */
+    --font: 'Roboto';
 }
 
-h1 {
+/* Estructura General del Estilo */
+* {
+    font-family: var(--font);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Reinicios de Estilos */
+/* Margenes */
+body,
+h1,
+h2,
+h3,
+h4,
+header p,
+.submenu,
+.subitems,
+.menu {
+    margin: 0;
+}
+
+/* Rellenos */
+.submenu,
+.subitems,
+.menu {
+    padding: 0;
+}
+
+/* Bordes */
+iframe {
+    border: 0;
+}
+
+h1, h2, h3 {
     text-align: center;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-}
+
+

@@ -90,13 +90,14 @@ header .menu p {
 }
 
 footer {
+  position: sticky;
+  bottom: 0;
   display: flex;
   justify-content: center;
   background-color: var(--grey);
   color: var(--light);
   padding: 1rem 0;
   align-items: center;
-  position: relative;
 }
 
 .tabla {
@@ -166,6 +167,12 @@ footer {
 
 #main h1 {
   padding-top: 2rem;
+}
+
+.tiempo {
+  padding: 5rem 2rem;
+  color: var(--second);
+  background-color: var(--med);
 }
 
 /* Autor: Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

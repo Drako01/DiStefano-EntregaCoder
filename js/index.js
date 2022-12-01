@@ -1,7 +1,7 @@
 // Defino las Variables (Utilizando todas las formas vistas)
 let nombre = 'Alejandro Daniel Di Stefano',
     comision = 44555,
-    links = ['Inicio', 'Cotizaciones', 'Nosotros', 'Contacto'],
+    links = ['Inicio', 'Cotizaciones', 'Nosotros', 'Institucional', 'Contacto', 'Ubicación'],
     formulario = [
         {
             id: 'monto',
@@ -47,9 +47,9 @@ const calcularInteres = (cuotas) => cuotas <= 12 ? 20 : cuotas <= 18 ? 30 : cuot
 const calcularCuotas = (i) =>
     modalidad.value == 'Frances' ?
         parseFloat(monto.value * (i / (1 - (1 + i) ** (cantCuotas.value * -1))), 2) :
-        modalidad.value == 'Aleman' ?
-            parseFloat((monto.value * i) / (1 - (1 - i) ** cantCuotas.value), 2) :
-            parseFloat(monto.value, 2) + (monto.value * i)
+    modalidad.value == 'Aleman' ?
+        parseFloat((monto.value * i) / (1 - (1 - i) ** cantCuotas.value), 2) :
+        parseFloat(monto.value, 2) + (monto.value * i)
 
 function resultado(i) {
     let section = d.querySelector('section');
@@ -79,21 +79,21 @@ function resultado(i) {
 
 //********** Manejo del DOM **********//
 
-// Defino la Navbar
-const navBar = (limit = []) => {
+// Defino la Navbar utilizando una Iteracion con forEach
+const navBar = () => {
     let nav = d.createElement('nav'),
         ul = d.createElement('ul');
     ul.className = 'menu';
-    for (let link of limit) {
+    links.forEach((link) => {
         ul.innerHTML += `<li><a href="#${link}">${link}</a></li>`;
-    }
+    })
     nav.appendChild(ul)
     header.appendChild(nav)
 }
 navBar(links);
 
 
-// Defino Tabla de Simulación
+// Defino Tabla de Simulación iterando con un for el objeto "formulario"
 const sectionTabla = (limits = []) => {
     let
         sectionTabla = d.createElement('section'),
@@ -141,6 +141,18 @@ const showSelected = () => {
     })
     resultado(interes);
 }
+
+// Defino la hora estandar de Argentina
+const date = new Date(),
+    [month, day, yearNow]       = [date.getMonth(), date.getDate(), date.getFullYear()],
+    [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()],
+    ahora = document.createElement('div');
+
+
+ahora.innerHTML = `<h3>${date}</h3>`
+ahora.className = 'tiempo'
+main.appendChild(ahora)
+
 
 /* 1er Entrega
     1. Conceptos generales: Sintaxis y variables

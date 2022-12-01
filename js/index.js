@@ -1,35 +1,35 @@
-// Defino las Variables para el Footer
+// Defino las Variables (Utilizando todas las formas vistas)
 let nombre = 'Alejandro Daniel Di Stefano',
     comision = 44555,
     links = ['Inicio', 'Cotizaciones', 'Nosotros', 'Contacto'],
     formulario = [
-    {
-        id: 'monto',
-        label: 'Monto',
-        type: 'text'
-    },
-    {
-        id: 'cantCuotas',
-        label: 'Cantidad de Cuotas',
-        type: 'text'
-    },
-    {
-        id: 'modalidad',
-        label: 'Modalidad de Crédito',
-        type: 'select',
-        options: ['Frances', 'Aleman']
-    },
-    {
-        id: 'tasaInteres',
-        label: 'Tasa de Interés (%)',
-        type: 'text'
-    },
-    {
-        id: 'calcular',
-        label: 'Calcular',
-        type: 'submit'
-    }
-];
+        {
+            id: 'monto',
+            label: 'Monto',
+            type: 'text'
+        },
+        {
+            id: 'cantCuotas',
+            label: 'Cantidad de Cuotas',
+            type: 'text'
+        },
+        {
+            id: 'modalidad',
+            label: 'Modalidad de Crédito',
+            type: 'select',
+            options: ['Frances', 'Aleman']
+        },
+        {
+            id: 'tasaInteres',
+            label: 'Tasa de Interés (%)',
+            type: 'text'
+        },
+        {
+            id: 'calcular',
+            label: 'Calcular',
+            type: 'submit'
+        }
+    ];
 const
     d = document,
     copy = d.querySelector('#footer .copy'),
@@ -52,13 +52,13 @@ const calcularCuotas = (i) =>
             parseFloat(monto.value, 2) + (monto.value * i)
 
 function resultado(i) {
-    let section = d.querySelector('section');        
-        monto = parseFloat(monto.value),
+    let section = d.querySelector('section');
+    monto = parseFloat(monto.value),
         cantCuotas = parseInt(cantCuotas.value),
         iva = 1.21,
         mes = 360,
         anual = ((cantCuotas * mes) / 12) / mes,
-        cuota = (monto * (Math.pow(1 + i / 100, anual) * i / 100) / (Math.pow(1 + i / 100, anual) - 1)).toFixed(2),
+        cuota = (monto * (Math.pow(1 + i / 100, anual) * i / 100) / (Math.pow(1 + i / 100, anual) - 1)).toFixed(2), // Utilizo Math y pow para las Potencias
         total = Number((cuota * cantCuotas / 10)).toFixed(2),
         totalIVA = Number((total * iva).toFixed(2));
 
@@ -74,9 +74,8 @@ function resultado(i) {
             </div>
         `;
     section.appendChild(loan);
-    
-}
 
+}
 
 //********** Manejo del DOM **********//
 
@@ -130,6 +129,8 @@ const sectionTabla = (limits = []) => {
 }
 sectionTabla(formulario);
 
+
+// Defino tabla de resultados
 const showSelected = () => {
     let a, interes;
     formulario.forEach(field => {
@@ -140,3 +141,26 @@ const showSelected = () => {
     })
     resultado(interes);
 }
+
+/* 1er Entrega
+    1. Conceptos generales: Sintaxis y variables
+    
+    2. Control de flujos
+    
+    3. Ciclos e iteraciones
+    
+    4. Funciones 
+
+2da Entrega
+    5. Objetos
+    
+    6. Arrays
+    
+    7. Funciones de orden superior
+    
+    8. DOM 
+
+    ***************************************************
+
+    Autor: Alejandro Daniel Di Stefano
+*/ 

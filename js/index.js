@@ -53,7 +53,7 @@ const calcularCuotas = (i) =>
 
 function resultado(i) {
     let section = d.querySelector('section');
-    monto = parseFloat(monto.value),
+        monto = parseFloat(monto.value),
         cantCuotas = parseInt(cantCuotas.value),
         iva = 1.21,
         mes = 360,
@@ -63,12 +63,12 @@ function resultado(i) {
         totalIVA = Number((total * iva).toFixed(2));
 
     loan = document.createElement('ul');
-    for (let i = 0; i < cantCuotas; i++) {
-        loan.innerHTML += `<div class="valor-cuota"><li> El valor de la Cuota ${parseInt(i + 1)} es de: $ ${(cuota / 10).toFixed(2)}.- ARS</li></div>`
-    }
+        for (let i = 0; i < cantCuotas; i++) {
+            loan.innerHTML += `<div class="valor-cuota"><li> El valor de la Cuota ${parseInt(i + 1)} es de: $ ${(cuota / 10).toFixed(2)}.- ARS</li></div>`
+        }
     loan.innerHTML += `
             <div class="recuadro">
-                <li>Ud. abonará al finalizar el Crédito:</li>
+                <h4>Ud. abonará al finalizar el Crédito:</h4>
                 <li>Total s/IVA: $ ${total}.- ARS</li>
                 <li>Total c/IVA: $ ${totalIVA}.- ARS</li>
             </div>
@@ -81,8 +81,8 @@ function resultado(i) {
 
 // Defino la Navbar
 const navBar = (limit = []) => {
-    let nav = d.createElement('nav');
-    let ul = d.createElement('ul');
+    let nav = d.createElement('nav'),
+        ul = d.createElement('ul');
     ul.className = 'menu';
     for (let link of limit) {
         ul.innerHTML += `<li><a href="#${link}">${link}</a></li>`;
@@ -132,7 +132,7 @@ sectionTabla(formulario);
 
 // Defino tabla de resultados
 const showSelected = () => {
-    let a, interes;
+    let interes;
     formulario.forEach(field => {
         eval(`const ${field['id']} = document.getElementById('${field['id']}')`);
         interes = calcularInteres(cantCuotas.value);

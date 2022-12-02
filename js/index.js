@@ -34,7 +34,7 @@ const
     d = document,
     copy = d.querySelector('#footer .copy');
     year = new Date(),
-    anio = [year.getFullYear()]; 
+    anio = year.getFullYear(); 
 
 function setFooter() {
     copy.innerHTML = `&copy;${anio} ${copy.innerHTML} | ${nombre} de la Comisión #${comision}`;
@@ -144,9 +144,7 @@ const showSelected = () => {
 }
 
 // Defino la hora estandar de Argentina
-const date = new Date(),
-    [month, day, yearNow] = [date.getMonth(), date.getDate(), date.getFullYear()],
-    [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()],
+const date = new Date(),    
     ahora = document.createElement('article');
 
 ahora.innerHTML = `<h4>${date}</h4>`;

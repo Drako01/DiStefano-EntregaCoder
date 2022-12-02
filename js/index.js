@@ -32,11 +32,12 @@ let nombre = 'Alejandro Daniel Di Stefano',
     ];
 const
     d = document,
-    copy = d.querySelector('#footer .copy'),
-    year = 2022;
+    copy = d.querySelector('#footer .copy');
+    year = new Date(),
+    anio = [year.getFullYear()]; 
 
 function setFooter() {
-    copy.innerHTML = `&copy;${year} ${copy.innerHTML} | ${nombre} de la Comisión #${comision}`;
+    copy.innerHTML = `&copy;${anio} ${copy.innerHTML} | ${nombre} de la Comisión #${comision}`;
 }
 setFooter();
 
@@ -144,14 +145,25 @@ const showSelected = () => {
 
 // Defino la hora estandar de Argentina
 const date = new Date(),
-    [month, day, yearNow]       = [date.getMonth(), date.getDate(), date.getFullYear()],
+    [month, day, yearNow] = [date.getMonth(), date.getDate(), date.getFullYear()],
     [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()],
-    ahora = document.createElement('div');
+    ahora = document.createElement('article');
 
+ahora.innerHTML = `<h4>${date}</h4>`;
+ahora.className = 'tiempo';
+ahora.style.backgroundColor = 'var(--med)';
+main.appendChild(ahora);
+main.style.backgroundColor = 'var(--second)';
 
-ahora.innerHTML = `<h3>${date}</h3>`
-ahora.className = 'tiempo'
-main.appendChild(ahora)
+const refresh = d.createElement('div')
+        refresh.id = 'refresh'
+        refresh.className = 'refresh'
+        refresh.innerHTML = `<button class="boton" id="refresh">Nueva Simulación</button>`
+        ahora.appendChild(refresh)
+
+refresh.addEventListener('click', a => {
+            location.reload(a);
+})
 
 
 /* 1er Entrega

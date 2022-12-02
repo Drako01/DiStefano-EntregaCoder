@@ -1,17 +1,17 @@
-.tabla{
+.tabla {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5rem;
-    
-    .imputs-valores{
+
+    .imputs-valores {
         width: 600px;
         background-color: var(--med);
         border-radius: 1rem;
         padding: 5rem;
         box-shadow: -.1rem .125rem .5rem var(--dark);
 
-        .imputs{
+        .imputs {
             display: flex;
             justify-content: space-between;
             height: 2rem;
@@ -19,57 +19,85 @@
             width: 100%;
             background-color: var(--med);
 
-            label{
+            label {
                 background-color: var(--med);
                 margin-top: .5rem;
             }
 
-            input, select, .boton{
+            input,
+            select,
+            .boton {
                 width: 220px;
                 border: none;
                 border-radius: .25rem;
             }
 
-            .boton{
+            .boton {
                 background-color: var(--second);
-                color: var(--light); 
+                color: var(--light);
                 width: 100%;
                 font-size: 1.2rem;
                 padding: .5rem;
                 height: 2.5rem;
                 box-shadow: -.125rem .125rem .5rem var(--dark);
                 cursor: pointer;
-            }     
-            
-            .boton:hover{
+            }
+
+            .boton:hover {
                 box-shadow: none;
-            }      
-        }        
+            }
+        }
     }
 }
-.valor-cuota{
+
+.valor-cuota {
     background-color: var(--med);
-    padding: .25rem 1rem;    
+    padding: .25rem 1rem;
 }
-.recuadro{
+
+.recuadro {
     font-weight: 600;
     background-color: var(--dark);
-    color: var(--light);   
+    color: var(--light);
     letter-spacing: 1px;
     padding: 1rem;
 }
-#tasaInteres{
+
+#tasaInteres {
     background-color: var(--med);
-    font-weight: 600;   
+    font-weight: 600;
     letter-spacing: 1px;
     font-size: 1.1rem;
     color: var(--second);
 }
-#main h1{
+
+#main h1 {
     padding-top: 2rem;
 }
-.tiempo{
-    padding: 5rem 2rem;
-    color: var(--second);
-    background-color: var(--med);
+
+.tiempo {
+    padding: 3rem 2rem;
+
+    h4 {
+        color: var(--second);
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+.refresh{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+#refresh>.boton {
+    background-color: var(--second);
+    color: var(--light);
+    width: 450px;
+    font-size: 1.2rem;
+    padding: .5rem;
+    height: 2.5rem;
+    box-shadow: -.125rem .125rem .5rem var(--dark);
+    cursor: pointer;
+    border: none;
+    border-radius: .25rem;
 }

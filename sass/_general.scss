@@ -51,6 +51,8 @@ iframe {
 
 h1, h2, h3 {
     text-align: center;
+    color: var(--light);
+    text-shadow: .1rem .1rem .1rem var(--dark);
 }
 
 

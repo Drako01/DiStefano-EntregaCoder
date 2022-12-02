@@ -58,6 +58,8 @@ iframe {
 
 h1, h2, h3 {
   text-align: center;
+  color: var(--light);
+  text-shadow: 0.1rem 0.1rem 0.1rem var(--dark);
 }
 
 header .menu {
@@ -125,7 +127,9 @@ footer {
   background-color: var(--med);
   margin-top: 0.5rem;
 }
-.tabla .imputs-valores .imputs input, .tabla .imputs-valores .imputs select, .tabla .imputs-valores .imputs .boton {
+.tabla .imputs-valores .imputs input,
+.tabla .imputs-valores .imputs select,
+.tabla .imputs-valores .imputs .boton {
   width: 220px;
   border: none;
   border-radius: 0.25rem;
@@ -170,9 +174,31 @@ footer {
 }
 
 .tiempo {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
+}
+.tiempo h4 {
   color: var(--second);
-  background-color: var(--med);
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.refresh {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#refresh > .boton {
+  background-color: var(--second);
+  color: var(--light);
+  width: 450px;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  box-shadow: -0.125rem 0.125rem 0.5rem var(--dark);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
 }
 
 /* Autor: Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

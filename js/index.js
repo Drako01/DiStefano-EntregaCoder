@@ -147,21 +147,23 @@ const showSelected = () => {
 const date = new Date(),    
     ahora = document.createElement('article');
 
-ahora.innerHTML = `<h4>${date}</h4>`;
+ahora.innerHTML = `<h4>La fecha Actual es:</h4>
+                    <h4>${date}</h4>`;
 ahora.className = 'tiempo';
 ahora.style.backgroundColor = 'var(--med)';
 main.appendChild(ahora);
 main.style.backgroundColor = 'var(--second)';
 
 const refresh = d.createElement('div')
-        refresh.id = 'refresh'
-        refresh.className = 'refresh'
-        refresh.innerHTML = `<button class="boton" id="refresh">Nueva Simulación</button>`
-        ahora.appendChild(refresh)
 
-refresh.addEventListener('click', a => {
-            location.reload(a);
-})
+    refresh.id = 'refresh'
+    refresh.className = 'refresh'
+    refresh.innerHTML = `<button class="boton" id="refresh">Nueva Simulación</button>`
+    ahora.appendChild(refresh)
+
+    refresh.addEventListener('click', a => {
+                location.reload(a);
+    })
 
 
 /* 1er Entrega

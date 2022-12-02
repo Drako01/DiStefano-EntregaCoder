@@ -144,7 +144,7 @@ const showSelected = () => {
 }
 
 // Defino la hora estandar de Argentina
-const date = new Date(),    
+const date = new Date().toLocaleDateString(),    
     ahora = document.createElement('article');
 
 ahora.innerHTML = `<h4>La fecha Actual es:</h4>

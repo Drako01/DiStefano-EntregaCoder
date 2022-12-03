@@ -83,7 +83,7 @@
 
 
 <div align="center" ><br>
-<img src="img/2daentrega.png" height="auto" width="600" border-radius= "20px";/>
+<img src="img/2daentreganew.png" height="auto" width="600" border-radius= "20px";/>
 <br>
  </div>
 

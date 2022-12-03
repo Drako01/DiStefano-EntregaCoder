@@ -165,6 +165,7 @@ const refresh = d.createElement('div'),
     ahora.appendChild(refresh)
     refresh.appendChild(refreshBtn)
 
+    // Por necesidad para darle mejor funcionalidad a la Página, agregué éste Evento
     refreshBtn.addEventListener('click', () => {
                 location.reload();
     })

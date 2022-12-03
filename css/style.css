@@ -188,7 +188,7 @@ footer {
   padding: 1rem;
 }
 
-#refresh > .boton {
+#refresh {
   background-color: var(--second);
   color: var(--light);
   width: 450px;

@@ -156,7 +156,6 @@ main.style.backgroundColor = 'var(--second)';
 
 const refresh = d.createElement('div')
 
-    refresh.id = 'refresh'
     refresh.className = 'refresh'
     refresh.innerHTML = `<button class="boton" id="refresh">Nueva Simulación</button>`
     ahora.appendChild(refresh)

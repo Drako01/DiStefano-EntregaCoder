@@ -154,14 +154,19 @@ ahora.style.backgroundColor = 'var(--med)';
 main.appendChild(ahora);
 main.style.backgroundColor = 'var(--second)';
 
-const refresh = d.createElement('div')
+const refresh = d.createElement('div'),
+    refreshBtn = d.createElement('button');
 
     refresh.className = 'refresh'
-    refresh.innerHTML = `<button class="boton" id="refresh">Nueva Simulación</button>`
+    refreshBtn.id = 'refresh'
+    refreshBtn.className = 'boton'
+    refreshBtn.innerText = 'Nueva Simulación'
+    
     ahora.appendChild(refresh)
+    refresh.appendChild(refreshBtn)
 
-    refresh.addEventListener('click', a => {
-                location.reload(a);
+    refreshBtn.addEventListener('click', () => {
+                location.reload();
     })
 
 

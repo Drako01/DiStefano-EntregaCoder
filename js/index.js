@@ -112,6 +112,8 @@ const navBar = () => {
         darkMode = d.createElement('button');
 
     ul.className = 'menu';
+    btnLog.className = 'btnLog';
+    darkMode.className = 'darkMode';
     btnLog.id = 'loginBtn';
     btnLogOut.id = 'logout';
     darkMode.id = 'darkMode';

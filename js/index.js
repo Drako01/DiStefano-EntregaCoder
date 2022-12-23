@@ -107,12 +107,15 @@ function resultado(i) {
 const navBar = () => {
     let nav = d.createElement('nav'),
         ul = d.createElement('ul'),
-        btnLog = d.createElement('button');
-        btnLogOut = d.createElement('button');
+        btnLog = d.createElement('button'),
+        btnLogOut = d.createElement('button'),
+        darkMode = d.createElement('button');
+
     ul.className = 'menu';
-    btnLog.className = 'btnLog';
     btnLog.id = 'loginBtn';
     btnLogOut.id = 'logout';
+    darkMode.id = 'darkMode';
+    darkMode.innerHTML = `Dark Mode`
     btnLog.innerHTML  = `<a href="login.html">
                         Inicio/Cierre de Sesión
                         </a> `
@@ -124,6 +127,7 @@ const navBar = () => {
     nav.appendChild(ul)
     ul.appendChild(btnLog)
     ul.appendChild(btnLogOut)
+    ul.appendChild(darkMode)
     header.appendChild(nav)
 }
 navBar(links);

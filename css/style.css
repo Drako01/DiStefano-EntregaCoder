@@ -231,16 +231,20 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5% 0 40% 0;
+  margin: 5% 0 25% 0;
   background-color: var(--grey);
   padding: 2rem;
   border-radius: 1rem;
-  width: 30%;
+  width: 20%;
   display: flex;
   align-items: center;
 }
 .contenedor-ppal .div-login input {
   margin: 10px 0px;
+  width: 220px;
+  border: none;
+  border-radius: 0.25rem;
+  height: 2rem;
 }
 .contenedor-ppal .div-login .btn {
   display: flex;
@@ -249,9 +253,9 @@ footer {
 .contenedor-ppal .div-login .btn input {
   background-color: var(--light);
   padding: 0.3rem 1rem;
-  font-weight: 800;
   border-radius: 0.25rem;
   color: var(--dark);
+  font-size: 1rem;
 }
 
 #login {

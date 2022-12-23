@@ -30,7 +30,7 @@ formLogin.onsubmit = (event) => {
         window.location.href = "index.html";
     } else {
         loginIncorrecto.style.display = "block"
-        loginIncorrecto.style.color = "white"
+        loginIncorrecto.style.color = "red"
         inputPass.style.border = "1px solid red"
         inputUser.style.border = "1px solid red"
     }

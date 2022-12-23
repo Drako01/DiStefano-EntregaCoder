@@ -1,7 +1,7 @@
 header {
     .menu {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         background-color: var(--grey);
         color: var(--light);
         padding: 1rem 0;
@@ -36,7 +36,7 @@ header {
             }
         }
         .btnLogout{
-            color: var(--light);
+            color: var(--grey);
             font-size: 1.2rem;
         }
         .btnLogout:hover {
@@ -49,4 +49,9 @@ header {
     min-width: 6rem;
     padding: .25rem .5rem;
     list-style: none;
+}
+
+
+body.dark>header .menu .btnLogout{
+    background-color: #7f8186;
 }

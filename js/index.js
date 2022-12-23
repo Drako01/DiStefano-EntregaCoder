@@ -78,23 +78,21 @@ const navBar = () => {
     darkMode.className = 'darkModeSwitch';    
     btnLog.id = 'loginBtn';
     btnLogOut.id = 'logout';
-    darkMode.id = 'switch';   
-    darkMode.innerHTML = `    
-                            <span><i class="fa fa-sun-o"></i></span>   
-                            <span><i class="fa fa-moon-o"></i></span>`
+    darkMode.id = 'switch';       
     
     btnLog.innerHTML  = `<a href="login.html">
-                        Inicio/Cierre de Sesión
+                        Inicio de Sesión
                         </a> `
     btnLogOut.innerHTML = `<a href="">Cerrar sesión</a>`   
-    
+    darkMode.innerHTML = `  <span></span>   
+                            <span></span>`
     links.forEach((name) => {
-        ul.innerHTML += `<li><a href="${name.page}.html">${name.link}</a></li>`;
+        ul.innerHTML += `<li><a href="./${name.page}.html" class="link-item">${name.link}</a></li>`;
     })
-    nav.appendChild(ul)
-    ul.appendChild(darkMode)    
+    nav.appendChild(ul)        
     ul.appendChild(btnLog)
     ul.appendChild(btnLogOut)
+    ul.appendChild(darkMode)
     header.appendChild(nav)
     
 }

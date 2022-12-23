@@ -101,3 +101,16 @@
     border: none;
     border-radius: .25rem;
 }
+body.dark>main> .tabla .imputs-valores .imputs .boton{
+    background-color: #7f8186;
+}
+body.dark>main> .tiempo #refresh {
+    background-color: #7f8186;
+}
+body.dark>main> .tiempo h4{
+    color: var(--dark);
+}
+body.dark>main> h1,body.dark>main> h2{
+    color: var(--dark);
+    text-shadow: none;
+}

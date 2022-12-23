@@ -24,7 +24,7 @@ const obtenerDelLs = (clave) => {
 formLogin.onsubmit = (event) => {
     event.preventDefault()
     if (inputUser.value === datosUsuario.user && inputPass.value === datosUsuario.password) {
-        storageDates("login", true)
+        storageDates(datosUsuario.user, datosUsuario.password)
         logout.style.display = "block" 
         loginIncorrecto.style.display = "none"
         window.location.href = "index.html";

@@ -23,6 +23,24 @@ header {
             padding-top: 2rem;
             text-align: center;
         }
+        .btnLog, .btnLogout{
+            background-color: var(--grey);
+            padding: .3rem 1rem;           
+            border: none;
+            a{
+                color: var(--light);
+            }
+            a:hover {
+                color: var(--yellow);
+            }
+        }
+        .btnLogout{
+            color: var(--light);
+            font-size: 1.2rem;
+        }
+        .btnLogout:hover {
+            color: var(--yellow);
+        }
     }
 }
 

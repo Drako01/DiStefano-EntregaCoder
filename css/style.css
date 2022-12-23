@@ -84,6 +84,24 @@ header .menu p {
   padding-top: 2rem;
   text-align: center;
 }
+header .menu .btnLog, header .menu .btnLogout {
+  background-color: var(--grey);
+  padding: 0.3rem 1rem;
+  border: none;
+}
+header .menu .btnLog a, header .menu .btnLogout a {
+  color: var(--light);
+}
+header .menu .btnLog a:hover, header .menu .btnLogout a:hover {
+  color: var(--yellow);
+}
+header .menu .btnLogout {
+  color: var(--light);
+  font-size: 1.2rem;
+}
+header .menu .btnLogout:hover {
+  color: var(--yellow);
+}
 
 :is(ul) li {
   min-width: 6rem;
@@ -199,6 +217,59 @@ footer {
   cursor: pointer;
   border: none;
   border-radius: 0.25rem;
+}
+
+#logout {
+  display: none;
+}
+
+.contenedor-ppal {
+  display: flex;
+  justify-content: center;
+}
+.contenedor-ppal .div-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5% 0 40% 0;
+  background-color: var(--grey);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.contenedor-ppal .div-login input {
+  margin: 10px 0px;
+}
+.contenedor-ppal .div-login .btn {
+  display: flex;
+  justify-content: center;
+}
+.contenedor-ppal .div-login .btn input {
+  background-color: var(--light);
+  padding: 0.3rem 1rem;
+  font-weight: 800;
+  border-radius: 0.25rem;
+  color: var(--dark);
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#logint,
+#textoLogout {
+  display: none;
+}
+
+#textoLogout {
+  margin: 20%;
+}
+#textoLogout h2 {
+  color: red;
 }
 
 /* Autor: Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

@@ -1,7 +1,26 @@
 // Defino las Variables (Utilizando todas las formas vistas)
 let nombre = 'Alejandro Daniel Di Stefano',
     comision = 44555,
-    links = ['Inicio', 'Cotizaciones', 'Nosotros', 'Institucional', 'Contacto', 'Ubicación'],
+    links = [
+            {
+                page: 'index',
+                link: 'Inicio'
+            },
+            {
+                page: 'products',
+                link: 'Productos'
+            },
+            {
+                page: 'contacts',
+                link: 'Contacto'
+            },
+            {
+                page: 'maps',
+                link: 'Ubicación'
+            }
+            
+
+        ],    
     formulario = [
         {
             id: 'monto',
@@ -34,7 +53,9 @@ const
     d = document,
     copy = d.querySelector('#footer .copy');
     year = new Date(),
-    anio = year.getFullYear(); 
+    anio = year.getFullYear(),
+    logout = document.querySelector("#logout"),
+    login = document.querySelector("#loginBtn"); 
 
 function setFooter() {
     copy.innerHTML = `&copy;${anio} ${copy.innerHTML} | ${nombre} de la Comisión #${comision}`;
@@ -59,13 +80,15 @@ function resultado(i) {
         iva = 1.21,
         mes = 360,
         anual = ((cantCuotas * mes) / 12) / mes,
-        cuota = (monto * (Math.pow(1 + i / 100, anual) * i / 100) / (Math.pow(1 + i / 100, anual) - 1)).toFixed(2), // Utilizo Math y pow para las Potencias
+        cuota = (monto * (Math.pow(1 + i / 100, anual) * i / 100) / 
+                (Math.pow(1 + i / 100, anual) - 1)).toFixed(2), // Utilizo Math y pow para las Potencias
         total = Number((cuota * cantCuotas / 10)).toFixed(2),
         totalIVA = Number((total * iva).toFixed(2));
 
     loan = document.createElement('ul');
         for (let i = 0; i < cantCuotas; i++) {
-            loan.innerHTML += `<div class="valor-cuota"><li> El valor de la Cuota ${parseInt(i + 1)} es de: $ ${(cuota / 10).toFixed(2)}.- ARS</li></div>`
+            loan.innerHTML += `<div class="valor-cuota"><li> El valor de la Cuota 
+                                ${parseInt(i + 1)} es de: $ ${(cuota / 10).toFixed(2)}.- ARS</li></div>`
         }
     loan.innerHTML += `
             <div class="recuadro">
@@ -83,12 +106,24 @@ function resultado(i) {
 // Defino la Navbar utilizando una Iteracion con forEach
 const navBar = () => {
     let nav = d.createElement('nav'),
-        ul = d.createElement('ul');
+        ul = d.createElement('ul'),
+        btnLog = d.createElement('button');
+        btnLogOut = d.createElement('button');
     ul.className = 'menu';
-    links.forEach((link) => {
-        ul.innerHTML += `<li><a href="#${link}">${link}</a></li>`;
+    btnLog.className = 'btnLog';
+    btnLog.id = 'loginBtn';
+    btnLogOut.id = 'logout';
+    btnLog.innerHTML  = `<a href="login.html">
+                        Inicio/Cierre de Sesión
+                        </a> `
+    btnLogOut.innerHTML = `Cerrar sesión`
+    
+    links.forEach((name) => {
+        ul.innerHTML += `<li><a href="${name.page}.html">${name.link}</a></li>`;
     })
     nav.appendChild(ul)
+    ul.appendChild(btnLog)
+    ul.appendChild(btnLogOut)
     header.appendChild(nav)
 }
 navBar(links);
@@ -171,6 +206,7 @@ const refresh = d.createElement('div'),
     })
 
 
+
 /* 1er Entrega
     1. Conceptos generales: Sintaxis y variables
     
@@ -188,6 +224,15 @@ const refresh = d.createElement('div'),
     7. Funciones de orden superior
     
     8. DOM 
+
+3er Entrega
+    9. Eventos
+
+    10. Storage & JSON
+
+    11. Workshop
+
+    12. Operadores avanzados 
 
     ***************************************************
 

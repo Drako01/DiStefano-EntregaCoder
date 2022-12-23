@@ -1,0 +1,60 @@
+#logout {
+    display: none;
+}
+
+.contenedor-ppal {
+    display: flex;
+    justify-content: center;
+
+    .div-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5% 0 40% 0;
+        background-color: var(--grey);
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 30%;
+        display: flex;
+        align-items: center;
+
+        input {
+            margin: 10px 0px;
+
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+
+            input {
+                background-color: var(--light);
+                padding: .3rem 1rem;
+                font-weight: 800;
+                border-radius: .25rem;
+                color: var(--dark);
+            }
+        }
+
+    }
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+#logint,
+#textoLogout {
+    display: none;
+}
+
+#textoLogout {
+    margin: 20%;
+
+    h2 {
+        color: red;
+    }
+}

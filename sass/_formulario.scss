@@ -114,3 +114,58 @@ body.dark>main> h1,body.dark>main> h2{
     color: var(--dark);
     text-shadow: none;
 }
+
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.producto {
+    max-width: 400px;
+    padding: 1.5rem;
+    margin: .8rem;
+    margin-bottom: 1.2rem;
+    box-shadow: .125rem .125rem .125rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    background-color: #dadada;
+    h3{
+        color: var(--dark);
+        text-shadow: none;
+    }
+    img {
+        width: 100%;
+        margin-bottom: .8rem;
+    }
+}
+.precioProducto {
+    font-weight: 600;
+}
+.boton-agregar {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: .5rem .8rem;
+    border: none;
+    border-radius: .25rem;
+    width: 100%;
+    box-shadow: .125rem .125rem .25rem #a4a5a5;
+}
+.boton-agregar:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+
+body.dark > #contenedor-productos{
+    background-color: white !important;
+}
+
+body.dark{
+    .producto{
+        background-color: var(--light);
+    }
+    .boton-agregar {
+        background-color: #989898;
+    }
+}

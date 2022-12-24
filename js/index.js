@@ -87,7 +87,7 @@ const navBar = () => {
     darkMode.innerHTML = `  <span></span>   
                             <span></span>`
     links.forEach((name) => {
-        ul.innerHTML += `<li><a href="./${name.page}.html" class="link-item">${name.link}</a></li>`;
+        ul.innerHTML += `<li class="link-item"><a href="./${name.page}.html">${name.link}</a></li>`;
     })
     nav.appendChild(ul)        
     ul.appendChild(btnLog)
@@ -97,7 +97,6 @@ const navBar = () => {
     
 }
 navBar(links);
-
 
 const switchButton = document.getElementById('switch');
 

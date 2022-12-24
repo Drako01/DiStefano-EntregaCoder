@@ -7,9 +7,7 @@ const
         contenedorForm = document.querySelector("#div-login"),
         logout = document.querySelector("#logout"),
         textoLogout = document.querySelector("#textoLogout");
-        login = document.querySelector("#loginBtn"),
-        linkItem = document.querySelectorAll(".link-item"),        
-        loginBtnInput = document.getElementById("loginBtnInput");
+        login = document.querySelector("#loginBtn");
     
         logout.className = 'btnLogout'
 
@@ -29,17 +27,13 @@ const obtenerDelLs = (clave) => {
 
 function loginSucss(){         
     logout.style.display = "block"              
-    textoLogout.style.display = "block"
+    textoLogout.style.display = "block"    
     textoLogout.innerHTML = `<h2>Bienvenido <span>${datosUsuario.user}</span> a la Pantalla de Inicio de Sesión</h2>
                             <h2>Desde esta pantalla puede Cerrar la misma.!</h2>`
     login.style.display = "none" 
-    contenedorForm.style.display = "none"  
-    linkItem.style.display = "none"       
+    contenedorForm.style.display = "none" 
 }
 
-// loginBtnInput.addEventListener('click', () => {           
-//     linkItem.classList.toggle('active');
-// });
 
 formLogin.onsubmit = (event) => {
     event.preventDefault()
@@ -70,7 +64,7 @@ logout.onclick = () => {
     localStorage.removeItem(datosUsuario.user)
     validarLogin(obtenerDelLs(datosUsuario.user))      
     formLogin.reset()   
-    contenedorForm.style.display = "flex"  
-    window.location.href = "index.html"; 
+    contenedorForm.style.display = "flex"
+    window.location.href = 'index.html';
 }
 

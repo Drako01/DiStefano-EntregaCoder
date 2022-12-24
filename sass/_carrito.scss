@@ -5,7 +5,7 @@
     border: none;
     color: var(--second);
     font-size: 1.2rem;
-    background-color: white;
+    background-color: #f1f1f1;
     border-radius: .5rem;
     padding: 10px 20px;
     transition: all .3s;
@@ -99,4 +99,15 @@
 }
 .boton-eliminar:focus {
     outline: none;
+}
+
+body.dark{
+    #boton-carrito {
+        color: var(--grey);
+        background-color: var(--light);
+    }
+    #boton-carrito:hover {
+        color: var(--light);
+        background-color: var(--grey);
+    }
 }

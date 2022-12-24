@@ -433,7 +433,7 @@ body.dark > main > .contenedor-ppal .div-login form > .btn input {
   border: none;
   color: var(--second);
   font-size: 1.2rem;
-  background-color: white;
+  background-color: #f1f1f1;
   border-radius: 0.5rem;
   padding: 10px 20px;
   transition: all 0.3s;
@@ -534,6 +534,15 @@ body.dark > main > .contenedor-ppal .div-login form > .btn input {
 
 .boton-eliminar:focus {
   outline: none;
+}
+
+body.dark #boton-carrito {
+  color: var(--grey);
+  background-color: var(--light);
+}
+body.dark #boton-carrito:hover {
+  color: var(--light);
+  background-color: var(--grey);
 }
 
 /* Autor: Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

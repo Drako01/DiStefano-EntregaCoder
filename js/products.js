@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
+    localStorage.removeItem('carrito')
     actualizarCarrito()
 })
 
@@ -43,9 +44,9 @@ stockProductos.forEach((producto) => {
 })
 
 const agregarAlCarrito = (prodId) => {
-    const existe = carrito.some (prod => prod.id === prodId)
+    const productExist = carrito.some (prod => prod.id === prodId)
 
-    if (existe){
+    if (productExist){
         const prod = carrito.map (prod => {
             if (prod.id === prodId){
                 prod.cantidad++
@@ -58,11 +59,11 @@ const agregarAlCarrito = (prodId) => {
     actualizarCarrito() 
 }
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.id === prodId)
-
-    const indice = carrito.indexOf(item)
-
+    const   item = carrito.find((prod) => prod.id === prodId),
+            indice = carrito.indexOf(item);
+    
     carrito.splice(indice, 1) 
+    localStorage.removeItem("carrito")
     actualizarCarrito()     
 }
 
@@ -82,6 +83,5 @@ const actualizarCarrito = () => {
 
     })
     contadorCarrito.innerText = carrito.length 
-    console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }

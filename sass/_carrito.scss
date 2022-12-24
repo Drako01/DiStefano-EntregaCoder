@@ -42,9 +42,10 @@
     position: relative;
     background-color: white;
     min-width: 500px;
-    padding: 20px;
+    padding: 1.5rem;
     margin-top: -100%;
     transition: all .5s;
+    border-radius: .5rem;
 }
 
 .modal-active .modal-carrito {

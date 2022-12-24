@@ -472,9 +472,10 @@ body.dark > main > .contenedor-ppal .div-login form > .btn input {
   position: relative;
   background-color: white;
   min-width: 500px;
-  padding: 20px;
+  padding: 1.5rem;
   margin-top: -100%;
   transition: all 0.5s;
+  border-radius: 0.5rem;
 }
 
 .modal-active .modal-carrito {

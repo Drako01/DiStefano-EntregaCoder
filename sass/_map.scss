@@ -1,0 +1,16 @@
+#mapa{
+    position: relative;
+    min-height: min(100vh, 640px);
+    padding: 5rem 0;
+
+}
+
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    z-index: 1;
+}
+

@@ -82,10 +82,20 @@
 ---
 
 
+### Imagenes de ésta entrega:
+
+
+
 <div align="center" ><br>
-<img src="img/2daentreganew.png" height="auto" width="600" border-radius= "20px";/>
+<img src="img/3daentrega1.png" height="auto" width="600" border-radius= "20px";/>
+<br>
+<img src="img/3daentrega2.png" height="auto" width="600" border-radius= "20px";/>
+<br>
+<img src="img/3daentrega3.png" height="auto" width="600" border-radius= "20px";/>
 <br>
  </div>
 
+
+---
 
 ## Autor: Alejandro Daniel Di Stefano

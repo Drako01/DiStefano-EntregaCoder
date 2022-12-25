@@ -550,6 +550,41 @@ body.dark #boton-carrito:hover {
   background-color: var(--grey);
 }
 
+/* Contenido */
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.auto {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size)), 1fr));
+}
+
+.auto > * {
+  flex: 1 0 min(100%, var(--size));
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.small {
+  --size: 200px;
+}
+
+.medium {
+  --size: 400px;
+}
+
+.large {
+  --size: 600px;
+}
+
 #mapa {
   position: relative;
   min-height: min(100vh, 640px);
@@ -569,22 +604,48 @@ body.dark #boton-carrito:hover {
 #contact {
   max-width: 540px;
   display: grid;
-  margin: 1rem auto;
+  margin: 3rem auto;
   padding: 1.5rem;
   background: linear-gradient(#eee, #ccc);
+  border-radius: 0.5rem;
 }
-
+#contact h2 {
+  color: var(--dark);
+  text-shadow: none;
+}
 #contact label {
   margin-top: 0.5rem;
   padding: 0.25rem;
 }
-
-input,
-textarea,
-select,
-button {
+#contact input,
+#contact textarea,
+#contact select,
+#contact button {
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
+  border: none;
+  height: 2rem;
+  border-radius: 0.25rem;
+}
+#contact .btn {
+  margin-top: 1.8rem;
+  background-color: var(--second);
+  color: var(--light);
+}
+
+body.dark > main {
+  background-color: white !important;
+}
+body.dark > main #contact {
+  background: linear-gradient(#ccc, #eee);
+}
+body.dark > main #contact h2 {
+  color: var(--dark);
+  text-shadow: none;
+}
+body.dark > main #contact .btn {
+  margin-top: 1.8rem;
+  background-color: var(--dark);
 }
 
 /* Autor: Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

@@ -565,4 +565,26 @@ body.dark #boton-carrito:hover {
   z-index: 1;
 }
 
+/* Formulario de Contacto */
+#contact {
+  max-width: 540px;
+  display: grid;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(#eee, #ccc);
+}
+
+#contact label {
+  margin-top: 0.5rem;
+  padding: 0.25rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
 /* Autor: Alejandro Di Stefano *//*# sourceMappingURL=style.css.map */

@@ -14,7 +14,33 @@
     </header>
 
     <main id="contacto">
-        <h1>Contacto</h1>        
+        <h1>Contacto</h1> 
+        <!-- Contacto -->
+        <form id="contact">
+            <h2>Dejanos tu consulta</h2>
+            <label for="">Ingrese su nombre</label>
+            <input 
+                type="text"
+                maxlength="50"
+                pattern="[A-Z a-z]{3,}"
+                required>
+            
+            <label for="">Ingrese su telefono</label>
+            <input 
+                type="tel"
+                maxlength="20"
+                pattern="(\d{6,20})|(\+*)[\(]\d{2,5}[\)](\d{2,6}[\-]){1,4}\d{4}"
+                required>
+            
+            <label for="">Ingrese su correo</label>
+            <input 
+                type="email"
+                minlength="8"
+                pattern="\w{2,}@\w{2,}(\.[a-zA-Z]{2,})+"
+                required>
+            
+            <button class="btn">Enviar</button>
+        </form>               
     </main>
 
     <footer id="footer">

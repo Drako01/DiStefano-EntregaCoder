@@ -58,9 +58,6 @@
 ### 4ta Entrega
 
 
-
-
-
 ```ssh
  13. Librerías
  
